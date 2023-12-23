@@ -83,7 +83,12 @@ export default function Profile() {
     } catch (error) {
       dispatch(updateUserFailure(error.message));
     }
+    
   };
+
+  const handleDelete = ()=> {
+    
+  }
 
   return (
     <div className="max-w-lg p-3 mx-auto">
@@ -146,7 +151,7 @@ export default function Profile() {
         </button>
       </form>
       <div className="flex justify-between mt-5">
-        <span className="text-red-700 cursor-pointer">Delete account</span>
+        <span onClick={handleDelete} className="text-red-700 cursor-pointer">Delete account</span>
         <span className="text-red-700 cursor-pointer">Sign out</span>
       </div>
       <p className="text-red-700 mt-5">{error ? error : ""}</p>
