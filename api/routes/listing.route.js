@@ -15,4 +15,5 @@ router.get('/get', getListingss);
 
 
 
+
 export default router;
