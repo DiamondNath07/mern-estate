@@ -6,9 +6,10 @@ import { useEffect } from "react";
 
 export default function Header() {
   const { currentUser } = useSelector((state) => state.user);
+  const Navigate = useNavigate()
   const [searchTerm, setSearchTerm] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const urlParams = new URLSearchParams(window.location.search);
     urlParams.set("searchTerm", searchTerm);
